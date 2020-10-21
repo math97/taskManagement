@@ -6,7 +6,12 @@ export const typeOrmConfig:TypeOrmModuleOptions = {
   port:5434,
   username:'postgres',
   password:'docker',
-  database:'taskmanagement',
+  database:'ArtyPrd',
   entities:[__dirname + '/../**/*.entity.{js,ts}'],
-  synchronize:true,
+  synchronize:false,
+  migrationsTableName: "custom_migration_table",
+  migrations: ["migration/*.{js,ts}"],
+  cli: {
+      migrationsDir: "migration"
+  }
 };

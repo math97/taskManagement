@@ -22,4 +22,5 @@ export class Task extends BaseEntity{
 
   @Column()
   userId:number
+
 }

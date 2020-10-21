@@ -1,0 +1,14 @@
+{
+ "type":"postgres",
+ "host":"localhost",
+  "port":5434,
+  "username":"postgres",
+  "password":"docker",
+  "database":"taskmanagement",
+  "synchronize":false,
+  "migrationsTableName": "custom_migration_table",
+  "migrations": ["src/migration/*.{js,ts}"],
+  "cli": {
+      "migrationsDir": "src/migration"
+  }
+}
